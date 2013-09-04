@@ -22,6 +22,7 @@ namespace info.arace.andrew.camcap {
             Console.Out.WriteLine("camcap [-f filename] [-s 640x480] [-d 1000] [-l logfile]");
             Console.Out.WriteLine();
             Console.Out.WriteLine("{0,-10}captures image to filename.jpg, overwriting existing", "   -f");
+            Console.Out.WriteLine("{0,-10}if filename is path ending in \\, uses default naming", "", System.DateTime.Now);
             Console.Out.WriteLine("{0,-10}default capture file name is {1:yyyyMMddHmmss}.jpg", "", System.DateTime.Now);
             Console.Out.WriteLine();
             Console.Out.WriteLine("{0,-10}specify capture size. default is 640x480", "   -s");
@@ -46,7 +47,7 @@ namespace info.arace.andrew.camcap {
 
             string logfilename = null;
             try {
-                string fileName = String.Format("{0:yyyyMMddHmmss}", System.DateTime.Now); ;
+                string fileName = String.Format("{0:yyyyMMddHmmss}", System.DateTime.Now);
                 int delay = 4000;
                 int width = 640;
                 int height = 480;
@@ -92,7 +93,11 @@ namespace info.arace.andrew.camcap {
                 if (lastdot != -1 && !fileName.Substring(lastdot).Contains("\\"))
                     fileName = fileName.Substring(0, lastdot);
 
-                //Assign proper extensions to both filenames
+                if (fileName.EndsWith("\\")) {
+                    fileName = fileName + String.Format("{0:yyyyMMddHmmss}", System.DateTime.Now);
+                }
+
+                //Assign proper extension
                 if (!fileName.EndsWith(".jpg", true, null))
                     fileName = fileName + ".jpg";
 
