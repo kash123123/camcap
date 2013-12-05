@@ -19,4 +19,12 @@ OR, for anyone who doesn't trust the code (why wouldn't you trust a program that
 
 2) Find your "Task Scheduler" in Windows (sometimes listed as "Scheduled Tasks") it could be under your Control Panel, or Control Panel\Administrative tools. If you're on Windows 7+, just press the start key and start typing "schedule" and you'll see it.
 
-2) Right click the root library (or create your own folder) and select "Create Basic Task" or "Create Task"
+2) Right click the root library (or create your own folder) and select "Create Basic Task" or "Create Task". The look of the screens varies with operating system, but you basically want it to execute:
+
+camcap.exe -f c:\somefolder\
+
+as a command line.
+
+for trigger events, you can use Windows Logon, or similar.
+
+3) After creating your task, you scan test it by right clicking it and running it. You should see the webcam light come on, and an image appear in the directory you specified.
