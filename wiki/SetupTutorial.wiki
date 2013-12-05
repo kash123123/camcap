@@ -6,7 +6,9 @@ To run this you will need .NET framework, version 4.0. If you're up to date on W
 
 You can download the ready-to-run binary package from here:
 
-https://camcap.googlecode.com/svn/deploy/camcap_20141204.zip
+https://camcap.googlecode.com/svn/deploy/camcap_20141205.zip
+
+(UPDATED 12/5, initial release was built on wrong source code).
 
 This deployment contains the libs necessary to run the application.
 
