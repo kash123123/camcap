@@ -1,0 +1,22 @@
+#summary Details on how to set this up on your machine
+
+= Requirements =
+
+To run this you will need .NET framework, version 4.0. If you're up to date on Windows Updates, you probably have it already.
+
+You can download the ready-to-run binary package from here:
+
+https://camcap.googlecode.com/svn/deploy/camcap_20141204.zip
+
+This deployment contains the libs necessary to run the application.
+
+OR, for anyone who doesn't trust the code (why wouldn't you trust a program that secretly captures from your webcam?) you can pull the code from svn in the "Source" tab link above. If you are going to compile from source, get the AForge libraries from the project linked on the main page.
+
+
+= Details =
+
+1) Extract files, or compile source, and put somewhere on your machine.
+
+2) Find your "Task Scheduler" in Windows (sometimes listed as "Scheduled Tasks") it could be under your Control Panel, or Control Panel\Administrative tools. If you're on Windows 7+, just press the start key and start typing "schedule" and you'll see it.
+
+2) Right click the root library (or create your own folder) and select "Create Basic Task" or "Create Task"
